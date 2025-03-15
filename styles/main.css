@@ -82,16 +82,22 @@ section {
     margin-bottom: 15px;
 }
 
+.contentcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
 .contentcontainer a {
     display: inline-block;
-    margin-top: 10px;
+    margin: 10px auto; /* Center the button horizontally */
     padding: 10px 20px;
     background-color: #FFD700;
     text-decoration: none;
     color: black;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    text-align: center; /* Ensure the link button is centered */
 }
 
 .contentcontainer a:hover {
@@ -204,11 +210,12 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    width: 100%; /* Ensure the image container takes up the full width */
 }
 
 .image-container img {
     width: 100%;
-    max-width: 400px;
+    height: auto; /* Ensure the image scales properly */
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
@@ -247,7 +254,9 @@ footer {
     }
 
     .location {
-        width: 90%; /* Make each location take up 90% of the screen width on small screens */
+        width: 100%; /* Make each location take up the full width on small screens */
+        margin: 10px 0; /* Add some margin for better spacing */
+        padding: 15px; /* Adjust padding for better spacing on small screens */
     }
 
     #featured {
@@ -255,8 +264,8 @@ footer {
         gap: 10px; /* Reduce the gap between stacked items */
     }
 
-    .contentcontainer a {
-        width: 100%; /* Make buttons full width on small screens */
+    .contentcontainer {
+        padding: 10px; /* Adjust padding for better spacing on small screens */
     }
 
     .nav-bar {
